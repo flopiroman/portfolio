@@ -12,13 +12,13 @@ const NavBar = (props) =>{
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='educations'> Education </NavLinks>
+                            <NavLinks to='experiences'> Experiences </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='projects'> School Projects </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='experiences'> Experiences </NavLinks>
+                            <NavLinks to='educations'> Education </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='contacts'> Contacts </NavLinks>

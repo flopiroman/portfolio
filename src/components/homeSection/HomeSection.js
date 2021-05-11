@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 import {FaArrowAltCircleRight, FaLongArrowAltRight} from 'react-icons/fa';
-import {
-Link as LinkRouter
-} from "react-router-dom";
-import {
-Link as LinkS
-} from "react-scroll";
 
 export const HomeContainer = styled.div`
     background: #0c0c0c;
@@ -17,7 +11,20 @@ export const HomeContainer = styled.div`
     position: relative;
     z-index: 1;
 
-
+    :before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(
+            180deg, 
+            rgba(0,0,0,0.2) 0%,
+            rgba(0,0,0,0.6) 100%
+            ),
+            linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparence 100%) ;
+    }
 `
 
 export const HomeBackGround = styled.div`
@@ -62,6 +69,7 @@ export const HomeImg = styled.img`
 
     &:hover{
         width: 30%;
+        border: 5px solid #fff;
     }
 `
 ;

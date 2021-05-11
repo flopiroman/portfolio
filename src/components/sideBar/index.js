@@ -9,14 +9,14 @@ const SideBar = (props) => {
             </Icon>
             <SideBarWrapper>
                 <SideBarMenu>
-                    <SideBarLink to='educations'>
-                        Educations
+                    <SideBarLink to='experiences'>
+                        Experiences
                     </SideBarLink>
                     <SideBarLink to='projects'>
                         Projects
                     </SideBarLink>
-                    <SideBarLink to='experiences'>
-                        Experiences
+                    <SideBarLink to='educations'>
+                        Educations
                     </SideBarLink>
                     <SideBarLink to='contacts'>
                         Contacts

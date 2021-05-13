@@ -1,12 +1,13 @@
 import NavBar from "../navBar"
 import SideBar from "../sideBar"
-import React, {useState} from 'react';
+import React, {useState,} from 'react';
 import HomeSection from "../homeSection";
 import Section from "../section";
-import { ActualWork } from "../../Data";
+import { ActualWork, PolytechStage } from "../../Data";
+import Projects from "../projects";
+import Technos from "../technos";
 // import profilePicture from '../../profilePicture.png';
 const Home = () =>{
-
     const [isOpen, setIsOpen] = useState(false);
 
     const onCloseButtonClik = () =>{
@@ -19,15 +20,11 @@ const Home = () =>{
         <SideBar isOpen ={isOpen}  onCloseButtonClik={onCloseButtonClik}/>
         <NavBar onCloseButtonClik={onCloseButtonClik} />
         <HomeSection/>
-        <Section 
-        id={ActualWork.id} 
-        topLine={ActualWork.topLine}
-        heading = {ActualWork.heading}
-        subtitle ={ActualWork.description}
-        darkTxt = 'true'
-        hidden = {ActualWork.hiddeLinkButton}
-
-        />
+        <Section {...ActualWork} />
+        <Section {...PolytechStage} />
+        <Projects/>
+        
+        <Technos/>
         </>
     );
 }

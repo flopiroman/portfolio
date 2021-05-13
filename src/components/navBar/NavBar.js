@@ -36,7 +36,7 @@ import {
   `
   ;
 
-  export const NavLogo = styled(LinkRouter)`
+  export const NavLogo = styled(LinkS)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
@@ -98,7 +98,12 @@ import {
     cursor: pointer;
 
     &.active{
-      border-bottom: 3px solid #01bf71;
+      border-bottom: 3px solid #40A497;
+    }
+    &:hover{
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #40A497 ;
     }
   `;
 
@@ -112,9 +117,9 @@ export const NavBtn = styled.nav`
  `;
 
 
-export const NavBtnLink = styled(LinkRouter)`
+export const NavBtnLink = styled.a`
   border-radius: 50px;
-  background: #01bf71;
+  background: #40A497;
   padding:10px 22px;
   color: #010606;
   font-size: 16px;

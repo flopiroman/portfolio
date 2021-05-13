@@ -9,16 +9,16 @@ const SideBar = (props) => {
             </Icon>
             <SideBarWrapper>
                 <SideBarMenu>
-                    <SideBarLink to='experiences'>
+                    <SideBarLink onClick={props.onCloseButtonClik} to='experiences'>
                         Experiences
                     </SideBarLink>
-                    <SideBarLink to='projects'>
+                    <SideBarLink onClick={props.onCloseButtonClik} to='projects'>
                         Projects
                     </SideBarLink>
-                    <SideBarLink to='educations'>
+                    <SideBarLink onClick={props.onCloseButtonClik} to='educations'>
                         Educations
                     </SideBarLink>
-                    <SideBarLink to='contacts'>
+                    <SideBarLink onClick={props.onCloseButtonClik} to='contacts'>
                         Contacts
                     </SideBarLink>
                 </SideBarMenu>

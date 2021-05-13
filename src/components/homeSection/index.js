@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {HomeBackGround,HomeContainer,VideoBackGround, HomeContent, HomeH1, HomeImg, HomeP,ArrowFoward, Flash, HomeBtnWrapper} from './HomeSection';
 import Video from '../../resources/video.mp4';
-import Image from '../../resources/profilePicture.png';
+import Image from '../../resources/images/profilePicture.png';
 import {Button} from '../HomeButton';
 
 const HomeSection = () => {
@@ -14,7 +14,7 @@ const HomeSection = () => {
 
     return (
         <>
-            <HomeContainer>
+            <HomeContainer id='/'>
                 <HomeBackGround>
                     <VideoBackGround autoPlay loop muted src={Video} type='video/mp4'/>
                 </HomeBackGround> 

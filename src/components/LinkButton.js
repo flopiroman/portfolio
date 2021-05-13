@@ -6,7 +6,8 @@ export const LinkButton = styled.a`
     background: ${({primary}) => (primary? '#01BF71' : '#010606')};
     white-space: nowrap;
     padding: ${({big}) => (big ?'14px 8px': '12px 30px')};
-    color: ${({dark}) => (dark ?'#40A497': '#fff')};
+    background: ${({dark}) => (dark ?'#40A497': '#fff')};
+    color: #fff;
     font-size : ${({fontBig}) => (fontBig ?'20px': '16px')};
     outline: none;
     border: none;
@@ -19,8 +20,8 @@ export const LinkButton = styled.a`
 
     &:hover{
         transition: all 0.2s ease-in-out;
-        background: ${({primary}) => (primary? '#fff' : '#40A497')}; 
-        color: #000;
+        background: #fff; 
+        color: '#40A497';
     }
 `
 ;

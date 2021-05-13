@@ -5,20 +5,27 @@ import { Container,BtnWrap,Column1,Column2,DataRow,DataWrapper,Img,ImgWrap,Subti
 const Section = (props) => {
     return (
         <>
-          <Container id={props.id}>
+          <Container id='experiences' lightBg={props.lightBg}>
               <DataWrapper>
-                  <DataRow>
+                  <DataRow imgStart={props.imgStart} >
 
                     <Column1>
                         <TextWrapper>
+                            
                             <TopLine>{props.topLine}</TopLine>
-                            <Heading>{props.heading}</Heading>
-                            <Subtitle darkTxt={props.darkTxt}>{props.subtitle}</Subtitle>
+                            <Heading lightTxt={props.lightTxt}>{props.heading}</Heading>
+                            <Subtitle darkTxt={props.darkTxt}>{props.description}</Subtitle>
                             <BtnWrap>
-                                <LinkButton href={props.projectPath} isHidden={props.hidden}>Link</LinkButton>
+                                <LinkButton href={props.projectPath} isHidden={props.isHidden} dark={props.buttonDark}>Link to Project</LinkButton>
                             </BtnWrap>
+
                         </TextWrapper>
                     </Column1>
+                    <Column2>
+                        <ImgWrap>
+                            <Img src={ props.img } alt={props.alt} />
+                        </ImgWrap>
+                    </Column2>
 
                   </DataRow>
               </DataWrapper>         

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav,NavContainer,NavLogo,MobileIcon,NavItem,NavLinks,NavMenu,NavBtnLink,NavBtn } from './NavBar';
 import {FaBars} from 'react-icons/fa'; 
+import CV from '../../resources/CV-Florian-Ainadou.pdf'
 const NavBar = (props) =>{
     return (
         <>
@@ -25,7 +26,7 @@ const NavBar = (props) =>{
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="downloadCV"> Download CV </NavBtnLink>
+                        <NavBtnLink href={CV}> Download CV </NavBtnLink>
                     </NavBtn>
                 </NavContainer>
             </Nav>

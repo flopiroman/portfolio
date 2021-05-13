@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-import {FaArrowAltCircleRight, FaLongArrowAltRight} from 'react-icons/fa';
 import {
 Link as LinkRouter
 } from "react-router-dom";
-import {
-Link as LinkS
-} from "react-scroll";
 
 export const Button = styled(LinkRouter)`
     border-radius: 50px;
-    background: ${({primary}) => (primary? '#01BF71' : '#010606')};
+    background: ${({primary}) => (primary? '#40A497' : '#010606')};
     white-space: nowrap;
     padding: ${({big}) => (big ?'14px 8px': '12px 30px')};
     color: ${({dark}) => (dark ?'#40A497': '#fff')};

@@ -13,7 +13,7 @@ import travis from '../../resources/images/techno/travis.png';
 import kafka from '../../resources/images/techno/kafka.jpg';
 import python from '../../resources/images/techno/python.jpg';
 import JavaEE from '../../resources/images/techno/javaEE.png';
-
+import flutter from '../../resources/images/techno/flutter.jpg';
 
 const Technos = () => {
 
@@ -76,6 +76,11 @@ const Technos = () => {
                 <BoxWrapperTechno>
                     <BoxCardTechno data-aos='flip-left'>
                         <Techno src={python}/>
+                    </BoxCardTechno>
+                </BoxWrapperTechno>
+                <BoxWrapperTechno>
+                    <BoxCardTechno data-aos='flip-left'>
+                        <Techno src={flutter}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
             </TechnoContainer>

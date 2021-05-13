@@ -1,7 +1,7 @@
 import React from 'react';
 import { LinkButton } from '../LinkButton';
 import { Container,BtnWrap,Column1,Column2,DataRow,DataWrapper,Img,ImgWrap,Subtitle,TextWrapper,TopLine,Heading } from './Section';
-
+import { projectsLink } from '../../Data';
 const Section = (props) => {
     return (
         <>
@@ -16,7 +16,9 @@ const Section = (props) => {
                             <Heading lightTxt={props.lightTxt}>{props.heading}</Heading>
                             <Subtitle darkTxt={props.darkTxt}>{props.description}</Subtitle>
                             <BtnWrap>
-                                <LinkButton href={props.projectPath} isHidden={props.isHidden} dark={props.buttonDark}>Link to Project</LinkButton>
+                                <LinkButton href={props.projectPath} isHidden={props.isHidden} dark={props.buttonDark} onClick={() => {
+                        window.open(projectsLink.symfinder)
+                    }}>Link to Project</LinkButton>
                             </BtnWrap>
 
                         </TextWrapper>

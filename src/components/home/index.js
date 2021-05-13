@@ -6,6 +6,7 @@ import Section from "../section";
 import { ActualWork, PolytechStage } from "../../Data";
 import Projects from "../projects";
 import Technos from "../technos";
+import Footer from "../footer";
 // import profilePicture from '../../profilePicture.png';
 const Home = () =>{
     const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,8 @@ const Home = () =>{
         <Section {...ActualWork} />
         <Section {...PolytechStage} />
         <Projects/>
-        
         <Technos/>
+        <Footer/>
         </>
     );
 }

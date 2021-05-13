@@ -14,7 +14,7 @@ export const BoxWrapperTechno = styled.div`
 `
 
 export const BoxCardTechno = styled.div`
-    background: #fff;
+    background: transparent;
     margin: 0 auto;
     /* background-position: bottom; */
     display: flex;
@@ -24,7 +24,7 @@ export const BoxCardTechno = styled.div`
     border-radius: 5px;
     max-height: 200px;
     /* padding: 10px; */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
     transition: all 0.2s ease-in-out;
 
     &:hover{
@@ -36,13 +36,14 @@ export const BoxCardTechno = styled.div`
 `
 
 export const TechnoContainer = styled.div`
-    height: 140px;
+    height: 70px;
     display: flex;
+    margin-top: 16px;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: baseline;
-    background: #000;
-
+    background: #fff;
+/* 
     @media screen and (max-width: 768px){
         max-height: 140px;
     }
@@ -50,6 +51,6 @@ export const TechnoContainer = styled.div`
     @media screen and (max-width: 480px){
         max-height: 140px;
     }
-
+ */
 
 `

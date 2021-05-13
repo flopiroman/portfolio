@@ -28,8 +28,8 @@ const HomeSection = () => {
                             looking for a software developer position architecture oriented starting in October 21.
                         </HomeP>
                         <HomeBtnWrapper>
-                            <Button to='experiences' onMouseEnter={onHoover} onMouseLeave={onHoover} primary='true'>
-                                My Experiences  {hover ? <ArrowFoward /> : <Flash />}
+                            <Button to='contacts' onMouseEnter={onHoover} onMouseLeave={onHoover} primary='true'>
+                                Contacts  {hover ? <ArrowFoward /> : <Flash />}
                             </Button>
                         </HomeBtnWrapper>
                     </HomeContent>

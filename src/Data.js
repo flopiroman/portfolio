@@ -44,3 +44,19 @@ export const PolytechStage = {
     primary: false,
 
 }          
+
+export const projectsLink={
+    symfinder: 'https://github.com/DeathStar3-projects/varicity',
+    isaDevops: 'https://github.com/pns-isa-devops/projet-isa-devops-20-team-j-20',
+    pnsInnov: 'https://github.com/PNS-PS7and8/pns-innov1920-pns-innov1920-j',
+    cookieFactory: 'https://github.com/PNS-Conception/cookiefactory-1920-besties/graphs/contributors',  
+    diceForge: 'https://github.com/YannisFalco/PS5-18-19-DiceForge-EquipeO',
+    spaceX: 'https://github.com/pns-si5-soa/box-20-21-team-f',
+    sacc: 'https://github.com/wak-nda/sacc',
+    train: 'https://github.com/wak-nda/train-booking-al-20-21-team-c',
+    cinEditor: 'https://github.com/wak-nda/dsl-group-b-TP2',
+    covidInfo: 'https://github.com/wak-nda/prog-web-ADKN'
+
+
+
+}

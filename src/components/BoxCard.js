@@ -23,7 +23,7 @@ export const BoxWrapper = styled.div`
 `
 
 export const BoxCard = styled.div`
-    background: #fff;
+    background: ${({color})=> (color? '#40A497' : '#fff' ) };
     /* background-position: bottom; */
     display: flex;
     flex-direction: column;

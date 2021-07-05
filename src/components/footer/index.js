@@ -26,6 +26,7 @@ const Footer = () => {
                             </SocialIcon>
                         </SocialMediaWrap>
                     </SocialMedia>
+                    <WebSiteRights> Phone: +33 7 77 95 79 64 </WebSiteRights>
                     <WebSiteRights> portfolio © {new Date().getFullYear()} All rights reserved, Powerded by React </WebSiteRights>
                 </FooterWrap>    
             </FooterContainer>   

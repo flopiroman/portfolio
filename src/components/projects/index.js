@@ -20,7 +20,7 @@ import Java from '../../resources/images/techno/Java.jpg';
 import DiceForge from '../../resources/images/projects/Dice-Forge.jpg';
 import Polytech from '../../resources/images/univ/imagePoly.png';
 import Epac from '../../resources/images/univ/epac.png';
-import { projectsLink } from '../../Data';
+import { projectsLink, schools } from '../../Data';
 
 const Projects = () => {
 
@@ -102,18 +102,20 @@ const Projects = () => {
             <ProjectsContainer id='educations' color={true}>
                 <ProjectH1 color={true}>Education</ProjectH1>
                 <BoxWrapper>
-                    <BoxCard color={true} data-aos='zoom-out-up'>
+                    <BoxCard color={true} data-aos='zoom-out-up' onClick={() => {
+                        window.open(schools.polytech)
+                    }}>
                         <ProjectIcon src={Polytech} bigIcon={false}/>
                         <ProjectH2> Engineering cycle in computer sciences specialized in software architecture</ProjectH2>
                         <ProjectP>Polytech Nice  (September 2018 - Now) </ProjectP>
                     </BoxCard>
                     <BoxCard  color={true} data-aos='zoom-out-up' >
-                        <ProjectIcon src={Epac} bigIcon={true}/>
+                        <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Engineering cycle first year in computer sciences and telecoms field </ProjectH2>
                         <ProjectP> EPAC (November 2017 - August 2018) </ProjectP>
                     </BoxCard>
                     <BoxCard  color={true} data-aos='zoom-out-up' >
-                        <ProjectIcon src={Epac} bigIcon={true}/>
+                        <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Preparatory classes in mathematics, physical sciences and computer science </ProjectH2>
                         <ProjectP> EPAC (September 2015 - October 2017) </ProjectP>
                     </BoxCard>

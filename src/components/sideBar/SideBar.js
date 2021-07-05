@@ -42,21 +42,28 @@ export const Icon = styled.div`
 
 export const SideBarWrapper = styled.div`
     color: #fff;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    margin-left: 0px;
 
 `;
 
 export const SideBarLink = styled(LinkS)`
     display:flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.5rem;
     text-decoration: none;
+    padding: 0px 0px;
     list-style: none;
+    margin-left: 0px;
     transition: 0.2s ease-in-out;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     &:hover {
         color: #01bf71;
         transition: 0ms.2s ease-in-out;
@@ -66,13 +73,15 @@ export const SideBarLink = styled(LinkS)`
 export const SideBarBtnWrap = styled.div`
     display: flex;
     justify-content:center;
+    align-items: center;
+    justify-items: center;
 `;
 
 export const SideBarRoute = styled(LinkRouter)`
     border-radius: 50px;
     background: #01bf71;
     white-space: nowrap;
-    padding: 16px 64px;
+    padding: 16px 50px;
     color: #010606;
     font-size: 16px;
     outline: none;
@@ -93,9 +102,8 @@ export const SideBarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 80px);
-    text-align: center;
-
+    padding-left: 0px;
     @media screen and (max-width: 480px) {
-        grid-template-rows: repeat(6, 60px);
+        grid-template-rows: repeat(6, 80px);
     }
 `;

@@ -23,7 +23,7 @@ const SideBar = (props) => {
                     </SideBarLink>
                 </SideBarMenu>
                 <SideBarBtnWrap>
-                    <SideBarRoute to='downloadCV'>Download CV</SideBarRoute>
+                    <SideBarRoute to='downloadCV'> Download CV </SideBarRoute>
                 </SideBarBtnWrap>
             </SideBarWrapper>
         </SideBarContainer>);

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Techno = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 `;
 
 export const BoxWrapperTechno = styled.div`

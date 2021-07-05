@@ -40,7 +40,7 @@ import {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    margin-left: 20px;
     font-weight: bold;
     text-decoration: none;
 

@@ -20,10 +20,10 @@ export const HomeContainer = styled.div`
         bottom: 0;
         background: linear-gradient(
             180deg, 
-            rgba(0,0,0,0.2) 0%,
-            rgba(0,0,0,0.6) 100%
+            rgba(0,0,0,0.2) 100%,
+            rgba(0,0,0,1) 100%
             ),
-            linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparence 100%) ;
+            linear-gradient(180deg, rgba(1,0,1,0.2) 0%, transparence 100%) ;
     }
 `
 
@@ -43,7 +43,7 @@ export const VideoBackGround = styled.video`
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    background: #232a34;
+    background: linear-gradient(top, #ffffff, #9acd00);
 `
 
 export const HomeContent = styled.div`
@@ -96,7 +96,9 @@ export const HomeP = styled.p`
     font-size: 24px;
     text-align: center;
     max-width: 600px;
-
+    background-color: #008B8B;
+    background: rgba(0,.5,0,.9);
+    border-radius: 20px;
     @media screen and (max-width: 768px){
         font-size: 24px;
     }

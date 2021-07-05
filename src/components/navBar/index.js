@@ -7,7 +7,7 @@ const NavBar = (props) =>{
         <>
             <Nav>
                 <NavContainer>
-                    <NavLogo to='/'>portfolio</NavLogo>
+                    <NavLogo to='/'>Florian A.</NavLogo>
                     <MobileIcon>
                         <FaBars onClick={props.onCloseButtonClik}/>
                     </MobileIcon>

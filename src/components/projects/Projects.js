@@ -7,6 +7,7 @@ export const ProjectsContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: ${({color})=> (color? '#000' : '#40A497') } ;
+    
 
     @media screen and (max-width: 768px){
         max-height: 2800px;
@@ -20,8 +21,8 @@ export const ProjectsContainer = styled.div`
 `
 
 export const ProjectIcon = styled.img`
-    height:${({bigIcon})=> (bigIcon? '150px' : '100px' ) };
-    width: ${({bigIcon})=> (bigIcon? '200px' : '100px' ) };
+    height:${({bigIcon})=> (bigIcon? '100px' : '60px' ) };
+    width: ${({bigIcon})=> (bigIcon? '120px' : '100px' ) };
     margin-bottom: 10px;
 `
 

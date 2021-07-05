@@ -1,6 +1,6 @@
 import React from 'react'
 import {FooterContainer,FooterWrap, SocialIcon, SocialIconLink,WebSiteRights, SocialMedia, SocialMediaWrap} from './Footer';
-import {FaGithub, FaLinkedin, FaMailBulk, FaTwitter} from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaMailBulk} from 'react-icons/fa';
 const Footer = () => {
     return (
         <>

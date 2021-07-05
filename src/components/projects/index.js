@@ -103,7 +103,7 @@ const Projects = () => {
                 <ProjectH1 color={true}>Education</ProjectH1>
                 <BoxWrapper>
                     <BoxCard color={true} data-aos='zoom-out-up'>
-                        <ProjectIcon src={Polytech} bigIcon={true}/>
+                        <ProjectIcon src={Polytech} bigIcon={false}/>
                         <ProjectH2> Engineering cycle in computer sciences specialized in software architecture</ProjectH2>
                         <ProjectP>Polytech Nice  (September 2018 - Now) </ProjectP>
                     </BoxCard>

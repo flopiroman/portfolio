@@ -14,72 +14,76 @@ import kafka from '../../resources/images/techno/kafka.jpg';
 import python from '../../resources/images/techno/python.jpg';
 import JavaEE from '../../resources/images/techno/javaEE.png';
 import flutter from '../../resources/images/techno/flutter.jpg';
-
+import { technoLinks } from '../../Data';
 const Technos = () => {
 
     useEffect(() =>{
         Aos.init({duration: 2000})
     })
+
+    const openLink = (link) => {
+        window.open(link);
+    }
     return (
         <>
             <TechnoContainer id='technos'>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.javaEE)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={JavaEE}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.vscode)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={vscode}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.docker)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={docker}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.htmlCss)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={htmlCss}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.java)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={java}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.react)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={react}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.node)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={node}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.theia)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={theia}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.travis)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={travis}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.kafka)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={kafka}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.python)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={python}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>
-                <BoxWrapperTechno>
-                    <BoxCardTechno data-aos='flip-left'>
+                <BoxWrapperTechno onClick={event => openLink(technoLinks.flutter)}>
+                    <BoxCardTechno data-aos='flip-left' >
                         <Techno src={flutter}/>
                     </BoxCardTechno>
                 </BoxWrapperTechno>

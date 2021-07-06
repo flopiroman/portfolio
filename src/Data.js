@@ -64,3 +64,22 @@ export const PolytechStage = {
 export const schools = {
     polytech: 'https://polytech.univ-cotedazur.fr/'
 }
+
+export const technoLinks ={
+    javaEE: 'https://www.oracle.com/fr/java/technologies/java-ee-glance.html',
+    vscode: 'https://code.visualstudio.com/api',
+    docker: 'https://www.docker.com/',
+    htmlCss: 'https://www.w3.org/Style/Examples/011/firstcss.fr.html',
+    java: 'https://www.java.com/fr/',
+    react: 'https://fr.reactjs.org/',
+    node: 'https://nodejs.org/en/',
+    theia: 'https://theia-ide.org/',
+    travis: 'https://www.travis-ci.com/',
+    kafka: 'https://kafka.apache.org/',
+    python: 'https://www.python.org/',
+    flutter: 'https://flutter.dev/?gclid=CjwKCAjw_o-HBhAsEiwANqYhp42AEbVz2ocRnQIPJShU-vnRi-Iy2vTmj-GhzlwOZmyUl4cDY5dn5BoCBKEQAvD_BwE&gclsrc=aw.ds'
+
+
+
+
+}

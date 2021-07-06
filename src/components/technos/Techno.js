@@ -36,7 +36,7 @@ export const BoxCardTechno = styled.div`
 `
 
 export const TechnoContainer = styled.div`
-    height: 70px;
+    height: 50px;
     display: flex;
     margin-top: 16px;
     flex-direction: row-reverse;

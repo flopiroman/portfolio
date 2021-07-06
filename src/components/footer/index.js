@@ -1,6 +1,6 @@
 import React from 'react'
 import {FooterContainer,FooterWrap, SocialIcon, SocialIconLink,WebSiteRights, SocialMedia, SocialMediaWrap} from './Footer';
-import {FaGithub, FaLinkedin, FaMailBulk} from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaMailBulk, FaPhone} from 'react-icons/fa';
 const Footer = () => {
     return (
         <>
@@ -24,9 +24,13 @@ const Footer = () => {
                                         <FaMailBulk/>
                                     </SocialIconLink>
                             </SocialIcon>
+                            <SocialIcon>
+                                    <SocialIconLink href='tel:+33777957964' aria-label='Twitter'>
+                                        <FaPhone/>
+                                    </SocialIconLink>
+                            </SocialIcon>
                         </SocialMediaWrap>
                     </SocialMedia>
-                    <WebSiteRights> Phone: +33 7 77 95 79 64 </WebSiteRights>
                     <WebSiteRights> portfolio © {new Date().getFullYear()} All rights reserved, Powerded by React </WebSiteRights>
                 </FooterWrap>    
             </FooterContainer>   

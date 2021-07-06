@@ -1,7 +1,7 @@
 import NavBar from "../navBar"
 import SideBar from "../sideBar"
 import React, {useState,} from 'react';
-import HomeSection from "../homeSection";
+import HomeSection from "../sectionHome";
 import Section from "../section";
 import { ActualWork, PolytechStage } from "../../Data";
 import Projects from "../projects";

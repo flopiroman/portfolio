@@ -113,7 +113,7 @@ const Projects = () => {
                         <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Engineering cycle first year in computer sciences and telecoms field </ProjectH2>
                         <ProjectP> EPAC (November 2017 - August 2018) </ProjectP>
-                    </BoxCard>
+                    </BoxCard> 
                     <BoxCard  color={true} data-aos='zoom-out-up' >
                         <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Preparatory classes in mathematics, physical sciences and computer science </ProjectH2>

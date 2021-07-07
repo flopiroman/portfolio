@@ -19,11 +19,11 @@ export const ActualWork = {
     lightBg: true,
     lightTxt: false,
     LightTextDesc: true,
-    topLine: 'STMICROELECTRONICS Sophia, October 21 - Now',
+    topLine: 'STMICROELECTRONICS Sophia, Oct 21-Now',
     heading: 'Software Developer',
-    description: ['I am actually working at STMICROELECTRONICS Sophia as an software developer. I m working with a team of 6 persons. \n \n ',
-    'Firstly, I worked on the STM32CubeMx application, developed in Java  which is is a graphical tool that allows a very easy configuration of STM32 microcontrollers and microprocessors. \n \n',
-    'After that, I add some features to a Java EE project named Powerflow which is used to ease STM32 microcontrollers and microprocessors industrial process management. \n \n' ,
+    description: ['I am actually working at STMICROELECTRONICS Sophia as an software developer. I m working with a team of 9 persons. \n \n ',
+    'Firstly, I worked on the STM32CubeMx application, developed in Java  which is is a graphical tool that allows a very easier configuration of STM32 microcontrollers.',
+    'After that, I added some features to a Java EE project named Powerflow which is used for STM32 microcontrollers industrial process management. \n\n' ,
     'At the present time, I m working on the developpement of Theia and Vscode extensions for a new project.'
     ],
     isHidden: false,
@@ -43,7 +43,7 @@ export const PolytechStage = {
     lightBg: false,
     lightTxt: true,
     LightTextDesc: false,
-    topLine: 'Polytech Nice Sophia',
+    topLine: 'Polytech Nice Sophia Jun-August 20',
     heading: 'Internship on Symfinder-api ',
     description: ['Symfinder is a Toolchain for the Identification and Visualization of Object-Oriented Variability Implementations. \n \n',
     'During this internship, I worked on the development of features using a specific toolchain which combines travis, docker, Java, Javascript, html/css and mocha for testing. \n \n',
@@ -51,7 +51,7 @@ export const PolytechStage = {
     ],
     isHidden: false,
     buttonDark: true,
-    projectPath: projectsLink.cubeMx ,
+    projectPath: projectsLink.symfinder,
     imgStart: true,
     img: Devops,
     alt: 'Developper',
@@ -62,7 +62,8 @@ export const PolytechStage = {
 
 
 export const schools = {
-    polytech: 'https://polytech.univ-cotedazur.fr/'
+    polytech: 'https://polytech.univ-cotedazur.fr/',
+    epac: 'https://www.esseyi.com/organizations/epac-uac'
 }
 
 export const technoLinks ={

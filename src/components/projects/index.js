@@ -109,12 +109,16 @@ const Projects = () => {
                         <ProjectH2> Engineering cycle in computer sciences specialized in software architecture</ProjectH2>
                         <ProjectP>Polytech Nice  (September 2018 - Now) </ProjectP>
                     </BoxCard>
-                    <BoxCard  color={true} data-aos='zoom-out-up' >
+                    <BoxCard  color={true} data-aos='zoom-out-up' onClick={() => {
+                        window.open(schools.epac)
+                    }}>
                         <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Engineering cycle first year in computer sciences and telecoms field </ProjectH2>
                         <ProjectP> EPAC (November 2017 - August 2018) </ProjectP>
                     </BoxCard> 
-                    <BoxCard  color={true} data-aos='zoom-out-up' >
+                    <BoxCard  color={true} data-aos='zoom-out-up' onClick={() => {
+                        window.open(schools.epac)
+                    }}>
                         <ProjectIcon src={Epac} bigIcon={false}/>
                         <ProjectH2> Preparatory classes in mathematics, physical sciences and computer science </ProjectH2>
                         <ProjectP> EPAC (September 2015 - October 2017) </ProjectP>

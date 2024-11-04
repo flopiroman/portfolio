@@ -7,11 +7,20 @@ import {
   HomeBodyText,
 } from "./HomeSection";
 import Image from "../../resources/images/profilePicture.png";
-import { Stack, styled } from "@mui/material";
-import { isMobile } from "react-device-detect";
-import { PALETTE } from "../../assets/variables";
+import { IconButton, Stack, styled, Typography } from "@mui/material";
+import { minWidth, PALETTE } from "../../assets/variables";
 import Footer from "../footer";
 import './HomeSection.css'
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";import CV from "../../assets/CV.pdf";
+import { useWindowSize } from 'usehooks-ts'
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = CV;
+  link.download = "CV-Florian-AINADOU.pdf";
+  link.click();
+};
+
 
 const StyledImage = styled('img')({
   width: '70%',
@@ -23,12 +32,13 @@ const StyledImage = styled('img')({
 })
 
 const HomeSection = () => {
+  const { width = 0, height = 0 } = useWindowSize()
 
   return (
       <Stack id="/" width="100%" height="100%" direction="column" alignItems="center" justifyContent="center">
           <Stack
             component="div"
-            direction={isMobile ? "column" : "row"}
+            direction={width < minWidth ? "column" : "row"}
             justifyContent="space-between"
             alignItems="center"
             className="card glow"
@@ -45,7 +55,14 @@ const HomeSection = () => {
                   Having graduated in Computer Science Engineering in 2021, I am currently a fullstack Java React developer.
                 </HomeBodyText>
               </Stack>
-              <Footer />
+              <Stack direction="row" width="100%" justifyContent="space-between"> 
+                <Footer /> 
+                <Stack direction="row" alignItems="center">
+                  <Typography fontSize={20} fontFamily="Poppins" sx={{ color: PALETTE.WHITE }}>Download CV :</Typography>
+                  <IconButton onClick={handleDownload} sx={{ mx: 1 }}>
+                    <CloudDownloadIcon fontSize="large" sx={{ color: PALETTE.WHITE }} />
+                  </IconButton></Stack>
+                </Stack>
             </Stack>
           </Stack>
       </Stack>

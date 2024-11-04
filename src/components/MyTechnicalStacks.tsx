@@ -1,6 +1,5 @@
 import { Card, Stack, styled, Typography } from '@mui/material'
-import { PALETTE } from '../assets/variables'
-import { isMobile } from 'react-device-detect'
+import { minWidth, PALETTE } from '../assets/variables'
 import { technoLinks } from '../Data'
 import react from "../resources/images/techno/react.png"
 import html5 from "../resources/images/techno/html5.png"
@@ -15,6 +14,7 @@ import node from "../resources/images/techno/node.png"
 import vscode from "../resources/images/techno/vscode.png"
 import gitlab from "../resources/images/techno/gitlab.png"
 import { HomeHeader } from './sectionHome/HomeSection'
+import { useWindowSize } from 'usehooks-ts'
 
 export const CardWrapper = styled(Stack)({
   flex: 1,
@@ -31,7 +31,7 @@ export const CardContainerAbastract = styled(Stack)({
   borderRadius: "30px",
   transition: '0.5s ease-in-out',
   "&:hover": {
-    scale: 1.1,
+    scale: 1.05,
     border: "solid 1px black",
     boxShadow: `10px 5px 5px ${PALETTE.CYAN}`,
   }
@@ -63,6 +63,7 @@ export const TechnoCard = styled(Card)({
 })
 
 const MyTechnicalStacks = () => {
+  const { width = 0, height = 0 } = useWindowSize()
   const openLink = (link: string) => {
     window.open(link);
   };
@@ -72,7 +73,7 @@ const MyTechnicalStacks = () => {
     <Stack height="10vh" alignItems="center" justifyContent="center">
       <HomeHeader>The stacks I usually work on...</HomeHeader>
     </Stack>
-    <Stack minHeight="90vh" direction={isMobile ? "column" : "row"}>
+    <Stack minHeight="90vh" direction={width < minWidth ? "column" : "row"}>
       <Stack flex={1}>
         <CardWrapper>
           <CardContainer>

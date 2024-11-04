@@ -10,12 +10,12 @@ import {
 } from "@mui/material";
 import React from "react";
 import LogoIcon from "../../assets/logoIcon.png";
-import { PALETTE } from "../../assets/variables";
-import { isMobile } from "react-device-detect";
+import { minWidth, PALETTE } from "../../assets/variables";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import CV from "../../assets/CV.pdf";
 import { Link } from "react-scroll";
+import CV from "../../assets/CV.pdf";
+import { useWindowSize } from 'usehooks-ts'
 
 const handleDownload = () => {
   const link = document.createElement("a");
@@ -31,6 +31,7 @@ const ButtonText = styled(Typography)({
 });
 
 const NavBar = () => {
+  const { width = 0, height = 0 } = useWindowSize()
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -50,7 +51,7 @@ const NavBar = () => {
       minHeight="5svh"
       bgcolor={PALETTE.CYAN}
     >
-      {isMobile && (
+      {width < minWidth && (
         <IconButton onClick={handleDownload} sx={{ mx: 1 }}>
           <CloudDownloadIcon fontSize="large" />
         </IconButton>
@@ -60,7 +61,7 @@ const NavBar = () => {
         alt="Florian A."
         style={{ maxHeight: "56px", padding: "8px", alignSelf: 'center' }}
       />
-      {isMobile ? (
+      {width < minWidth ? (
         <Stack maxWidth="56px" alignItems="center" justifyContent="center">
           <IconButton sx={{ mx: 1 }} onClick={handleClick}>
             <MenuIcon fontSize="large" />

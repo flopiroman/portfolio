@@ -4,3 +4,5 @@ export enum PALETTE {
   WHITE = "#FFFFFF",
   BLACK_GREEN = "#0E1512",
 }
+
+export const minWidth = 1150

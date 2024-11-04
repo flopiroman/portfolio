@@ -1,8 +1,7 @@
 import { Button, Stack, styled, Typography } from '@mui/material'
 import React from 'react'
 import { HomeHeader } from './sectionHome/HomeSection'
-import { PALETTE } from '../assets/variables'
-import { isMobile } from 'react-device-detect'
+import { minWidth, PALETTE } from '../assets/variables'
 import { CardContainerAbastract, CardWrapper, TechnoCard } from './MyTechnicalStacks'
 import landfiles from "../resources/images/techno/landfiles.webp"
 import theia from "../resources/images/techno/theia.jpeg"
@@ -22,6 +21,7 @@ import mysql from "../resources/images/techno/mysql.png"
 import node from "../resources/images/techno/node.png"
 import vscode from "../resources/images/techno/vscode.png"
 import gitlab from "../resources/images/techno/gitlab.png"
+import { useWindowSize } from 'usehooks-ts'
 
 const CustomButton = styled(Button)({
   backgroundColor: PALETTE.CYAN,
@@ -42,6 +42,7 @@ const ImageContainer = styled(Stack)({
 const ExperiencesCard = styled(CardContainerAbastract)({
   backgroundColor: PALETTE.GREEN, 
   height: "350px",
+  marginTop: '10px',
 })
 
 const SmallTechnoCard = styled(TechnoCard)({
@@ -52,6 +53,7 @@ const SmallTechnoCard = styled(TechnoCard)({
 })
 
 const MyExperiences = () => {
+  const { width = 0, height = 0 } = useWindowSize()
   const openLink = (link: string) => {
     window.open(link);
   };
@@ -61,7 +63,7 @@ const MyExperiences = () => {
     <Stack height="10vh" alignItems="center" justifyContent="center">
       <HomeHeader style={{ color: PALETTE.BLACK_GREEN }}>Some experiences...</HomeHeader>
     </Stack>
-    <Stack minHeight="90vh" direction={isMobile ? "column" : "row"}>
+    <Stack minHeight="90vh" direction={width < minWidth ? "column" : "row"}>
     <Stack flex={1}>
         <CardWrapper>
           <ExperiencesCard>

@@ -68,6 +68,15 @@ const NavBar = () => {
         </Stack>
       ) : (
         <Stack height="100%" direction="row">
+
+          <ListItem>
+            <Link to="stacks">
+              <ListItemButton sx={{ textAlign: "center", mx: 2 }}>
+                <ButtonText>Stacks</ButtonText>
+              </ListItemButton>
+            </Link>
+          </ListItem>
+
           <ListItem key="experiences">
             <Link to="experiences">
               <ListItemButton sx={{ textAlign: "center", mx: 2 }}>
@@ -76,21 +85,13 @@ const NavBar = () => {
             </Link>
           </ListItem>
 
-          <ListItem>
-            <Link to="projects">
-              <ListItemButton sx={{ textAlign: "center", mx: 2 }}>
-                <ButtonText>Projects</ButtonText>
-              </ListItemButton>
-            </Link>
-          </ListItem>
-
-          <ListItem>
+          {/* <ListItem>
             <Link to="educations">
               <ListItemButton sx={{ textAlign: "center", mx: 2 }}>
                 <ButtonText>Education</ButtonText>
               </ListItemButton>
             </Link>
-          </ListItem>
+          </ListItem> */}
 
           {/* <ListItem>
             <Link to="contacts">

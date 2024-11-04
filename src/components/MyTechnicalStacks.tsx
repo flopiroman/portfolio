@@ -16,24 +16,19 @@ import vscode from "../resources/images/techno/vscode.png"
 import gitlab from "../resources/images/techno/gitlab.png"
 import { HomeHeader } from './sectionHome/HomeSection'
 
-
-
-const StackWrapper = styled(Stack)({
+export const CardWrapper = styled(Stack)({
   flex: 1,
   backgroundColor: "transparent",
   justifyContent: 'center',
   alignItems: 'center',
 })
 
-const StacksContainer = styled(Stack)({
+export const CardContainerAbastract = styled(Stack)({
   width: "350px",
   height: "280px",
-  backgroundColor: PALETTE.WHITE,
-  borderRadius: "30px",
   padding: "20px",
   display: "flex",
-  flexDirection: "row",
-  flexWrap: 'wrap',
+  borderRadius: "30px",
   transition: '0.5s ease-in-out',
   "&:hover": {
     scale: 1.1,
@@ -42,7 +37,13 @@ const StacksContainer = styled(Stack)({
   }
 })
 
-const TechnoCard = styled(Card)({
+export const CardContainer = styled(CardContainerAbastract)({
+  backgroundColor: PALETTE.WHITE,
+  flexDirection: "row",
+  flexWrap: 'wrap',
+})
+
+export const TechnoCard = styled(Card)({
   width: "90px",
   height: "90px",
   display: "flex",
@@ -67,14 +68,14 @@ const MyTechnicalStacks = () => {
   };
 
   return (
-    <Stack bgcolor={PALETTE.GREEN}>
+    <Stack bgcolor={PALETTE.GREEN} id="stacks">
     <Stack height="10vh" alignItems="center" justifyContent="center">
       <HomeHeader>The stacks I usually work on...</HomeHeader>
     </Stack>
     <Stack minHeight="90vh" direction={isMobile ? "column" : "row"}>
       <Stack flex={1}>
-        <StackWrapper>
-          <StacksContainer>
+        <CardWrapper>
+          <CardContainer>
             <TechnoCard onClick={() => openLink(technoLinks.react)}>
               <img width="100%" src={react} />
             </TechnoCard>
@@ -93,12 +94,12 @@ const MyTechnicalStacks = () => {
             <TechnoCard onClick={() => openLink(technoLinks.node)}>
               <img width="100%" src={node} />
             </TechnoCard>
-          </StacksContainer>
-        </StackWrapper>
+          </CardContainer>
+        </CardWrapper>
       </Stack>
       <Stack flex={1}>
-        <StackWrapper>
-          <StacksContainer>
+        <CardWrapper>
+          <CardContainer>
             <TechnoCard onClick={() => openLink(technoLinks.git)}>
               <img width="100%" src={git} />
             </TechnoCard>
@@ -117,8 +118,8 @@ const MyTechnicalStacks = () => {
             <TechnoCard onClick={() => openLink(technoLinks.mongodb)}>
               <img width="100%" src={mongodb} />
             </TechnoCard>
-          </StacksContainer>
-        </StackWrapper>
+          </CardContainer>
+        </CardWrapper>
       </Stack>
     </Stack>
     </Stack>

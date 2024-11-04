@@ -85,6 +85,7 @@ export const technoLinks = {
   travis: "https://www.travis-ci.com/",
   kafka: "https://kafka.apache.org/",
   python: "https://www.python.org/",
+  angular: "https://angular.dev/",
   flutter:
     "https://flutter.dev/?gclid=CjwKCAjw_o-HBhAsEiwANqYhp42AEbVz2ocRnQIPJShU-vnRi-Iy2vTmj-GhzlwOZmyUl4cDY5dn5BoCBKEQAvD_BwE&gclsrc=aw.ds",
 };

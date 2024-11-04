@@ -25,14 +25,14 @@ const StyledImage = styled('img')({
 const HomeSection = () => {
 
   return (
-      <Stack id="/" width="100%" height="100%" direction="column" alignItems="center" justifyContent="center" /*sx={{ backgroundColor: PALETTE.BLACK_GREEN }}*/>
+      <Stack id="/" width="100%" height="100%" direction="column" alignItems="center" justifyContent="center">
           <Stack
             component="div"
             direction={isMobile ? "column" : "row"}
             justifyContent="space-between"
             alignItems="center"
             className="card glow"
-            sx={{ backgroundColor: PALETTE.GREEN, maxWidth: '70vw' }}
+            sx={{ backgroundColor: PALETTE.GREEN, maxWidth: '70vw', minHeight: "50vh", boxShadow: "20px 10px 10px grey", borderRadius: '30px' }}
           >
             <Stack width="40%" alignItems="center" justifyContent="center">
               <StyledImage src={Image} alt="Profile Picture" />

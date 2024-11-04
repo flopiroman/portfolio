@@ -8,7 +8,8 @@ import Technos from "../technos";
 import Footer from "../footer";
 import { Stack } from "@mui/material";
 import NavBar from "../NavigationBar/NavBar";
-import LandfilesSection from "../LandfilesSection";
+import MyTechnicalStacks from "../MyTechnicalStacks";
+import SomeThrees from "../SomeThrees";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
         <NavBar />
         <HomeSection />
       </Stack>
-      <LandfilesSection />
+      {/* <SomeThrees /> */}
+      <MyTechnicalStacks />
       <Section {...ActualWork} />
       {/* <Stack>
         <Section {...PolytechStage} />

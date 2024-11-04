@@ -69,14 +69,14 @@ export const HomeImg = styled.img`
   }
 `;
 
-export const HomeH1 = styled.h1`
+export const HomeHeader = styled.h1`
   color: #fff;
   font-size: clamp(22px, 30px, 40px);
   text-align: ${isMobile ? "center" : "flex-start"};
   font-family: Poppins;
 `;
 
-export const HomeP = styled.p`
+export const HomeBodyText = styled.p`
   margin-top: 24px;
   color: #fff;
   font-size: 24px;

@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import {
   HomeContainer,
   HomeContent,
-  HomeH1,
+  HomeHeader,
   HomeImg,
-  HomeP,
+  HomeBodyText,
 } from "./HomeSection";
-import Video from "../../resources/video.mp4";
 import Image from "../../resources/images/profilePicture.png";
 import { Stack, styled } from "@mui/material";
 import { isMobile } from "react-device-detect";
@@ -40,11 +39,11 @@ const HomeSection = () => {
             </Stack>
             <Stack direction="column">
               <Stack ml="10px" >
-                <HomeP>My name is...</HomeP>
-                <HomeH1>Florian AINADOU</HomeH1>
-                <HomeP>
-                Having graduated in Computer Science Engineering in 2021, I am currently a fullstack Java React developer.
-                </HomeP>
+                <HomeBodyText>My name is...</HomeBodyText>
+                <HomeHeader>Florian AINADOU</HomeHeader>
+                <HomeBodyText>
+                  Having graduated in Computer Science Engineering in 2021, I am currently a fullstack Java React developer.
+                </HomeBodyText>
               </Stack>
               <Footer />
             </Stack>

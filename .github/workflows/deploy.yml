@@ -41,7 +41,7 @@ jobs:
 
       # Étape 5 : Uploader le dossier de build comme un artifact
       - name: Upload build folder as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages  # Nom de l'artifact pour le déploiement
           path: ./build  # Le dossier `build/` créé après le `yarn build`

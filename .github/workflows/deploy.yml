@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Déclenche le workflow sur la branche principale
+      - master  # Déclenche le workflow sur la branche principale
 
 permissions:
   contents: write
@@ -34,6 +34,6 @@ jobs:
 
       # Étape 5 : Déployer avec `gh-pages`
       - name: Deploy to GitHub Pages
-        run: yarn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: deployment
+        uses: actions/deploy-pages@v4
+     

@@ -1,7 +1,6 @@
 {
   "name": "florian-ainadou-portfolio",
   "version": "2.0.0",
-  "license": "MIT",
   "homepage": "https://flopiroman.github.io/portfolio",
   "private": true,
   "dependencies": {

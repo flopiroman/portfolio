@@ -3,11 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Déclenche le workflow sur la branche principale
+      - master
 
 permissions:
-  id-token: write   # Permission pour générer des tokens OIDC
-  contents: write   # Permission pour pousser les fichiers sur GitHub Pages
+  contents: write
 
 jobs:
   deploy:
@@ -29,19 +28,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Étape 4 : Construire le projet React
+      # Étape 4 : Construire le projet
       - name: Build project
         run: yarn build
 
-      # Étape 5 : Uploader le dossier de build comme un artifact
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./build  # Le dossier de build à uploader comme artifact
-
-      # Étape 6 : Déployer l'artifact sur GitHub Pages
+      # Étape 5 : Déployer avec `gh-pages`
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: yarn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

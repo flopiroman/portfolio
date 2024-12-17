@@ -26,7 +26,7 @@ const Footer = () => {
               </SocialIcon>
               <SocialIcon>
                 <SocialIconLink
-                  href="https://github.com/FlorianAinadou"
+                  href="https://github.com/flopiroman"
                   aria-label="Github"
                 >
                   <FaGithub />

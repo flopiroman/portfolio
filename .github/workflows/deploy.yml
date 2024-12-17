@@ -33,6 +33,12 @@ jobs:
       - name: Build project
         run: yarn build
 
+        # Étape 5 : Configurer l'identité de l'utilisateur Git
+      - name: Set Git user info
+        run: |
+          git config --global user.email "florian.ainadou97@gmail.com"
+          git config --global user.name "Florian AINADOU"
+
       # Étape 5 : Déployer avec `gh-pages`
       - name: Deploy to GitHub Pages
         run: yarn deploy

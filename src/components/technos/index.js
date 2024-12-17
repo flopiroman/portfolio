@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import Aos from "aos";
 import {
   BoxWrapperTechno,
   BoxCardTechno,
   Techno,
   TechnoContainer,
 } from "./Techno";
-import "aos/dist/aos.css";
 import vscode from "../../resources/images/techno/vscode.png";
 import docker from "../../resources/images/techno/docker.jpg";
 import htmlCss from "../../resources/images/techno/htmlCss.svg";
@@ -21,9 +19,6 @@ import JavaEE from "../../resources/images/techno/javaEE.png";
 import flutter from "../../resources/images/techno/flutter.jpg";
 import { technoLinks } from "../../Data";
 const Technos = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  });
 
   const openLink = (link) => {
     window.open(link);
@@ -77,17 +72,17 @@ const Technos = () => {
           </BoxCardTechno>
         </BoxWrapperTechno>
         <BoxWrapperTechno onClick={(event) => openLink(technoLinks.kafka)}>
-          <BoxCardTechno data-aos="flip-left">
+          <BoxCardTechno>
             <Techno src={kafka} />
           </BoxCardTechno>
         </BoxWrapperTechno>
         <BoxWrapperTechno onClick={(event) => openLink(technoLinks.python)}>
-          <BoxCardTechno data-aos="flip-left">
+          <BoxCardTechno>
             <Techno src={python} />
           </BoxCardTechno>
         </BoxWrapperTechno>
         <BoxWrapperTechno onClick={(event) => openLink(technoLinks.flutter)}>
-          <BoxCardTechno data-aos="flip-left">
+          <BoxCardTechno>
             <Techno src={flutter} />
           </BoxCardTechno>
         </BoxWrapperTechno>

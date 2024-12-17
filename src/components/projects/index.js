@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Aos from "aos";
 import { BoxWrapper, BoxCard } from "../BoxCard";
 import {
   ProjectsContainer,
@@ -9,7 +8,6 @@ import {
   ProjectP,
   TechnoImages,
 } from "./Projects";
-import "aos/dist/aos.css";
 import SpaceX from "../../resources/images/projects/spacex.jpg";
 import TrainBookin from "../../resources/images/projects/train.jpg";
 import PythonKafka from "../../resources/images/techno/kafpy.png";
@@ -154,7 +152,6 @@ const Projects = () => {
         <BoxWrapper>
           <BoxCard
             color={true}
-            data-aos="zoom-out-up"
             onClick={() => {
               window.open(schools.polytech);
             }}
@@ -169,7 +166,6 @@ const Projects = () => {
           </BoxCard>
           <BoxCard
             color={true}
-            data-aos="zoom-out-up"
             onClick={() => {
               window.open(schools.epac);
             }}
@@ -184,7 +180,6 @@ const Projects = () => {
           </BoxCard>
           <BoxCard
             color={true}
-            data-aos="zoom-out-up"
             onClick={() => {
               window.open(schools.epac);
             }}

@@ -9,7 +9,6 @@ import Footer from "../footer";
 import { Stack } from "@mui/material";
 import NavBar from "../NavigationBar/NavBar";
 import MyTechnicalStacks from "../MyTechnicalStacks";
-import SomeThrees from "../SomeThrees";
 import MyExperiences from "../MyExperiences";
 
 const Home = () => {

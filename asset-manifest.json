@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.137d3e6a.css",
-    "main.js": "/portfolio/static/js/main.e6f61919.js",
+    "main.js": "/portfolio/static/js/main.faf6d4ab.js",
     "static/media/CV.pdf": "/portfolio/static/media/CV.0546035d16849bf4d42a.pdf",
     "static/media/trainBooking.png": "/portfolio/static/media/trainBooking.bb71665e81b0a1a00266.png",
     "static/media/spacex.jpg": "/portfolio/static/media/spacex.9a2accd6fbd167bd0f24.jpg",
@@ -39,10 +39,10 @@
     "static/media/tools.svg": "/portfolio/static/media/tools.8f451dceb2ea5ba2460c9da8e15a8c76.svg",
     "index.html": "/portfolio/index.html",
     "main.137d3e6a.css.map": "/portfolio/static/css/main.137d3e6a.css.map",
-    "main.e6f61919.js.map": "/portfolio/static/js/main.e6f61919.js.map"
+    "main.faf6d4ab.js.map": "/portfolio/static/js/main.faf6d4ab.js.map"
   },
   "entrypoints": [
     "static/css/main.137d3e6a.css",
-    "static/js/main.e6f61919.js"
+    "static/js/main.faf6d4ab.js"
   ]
 }

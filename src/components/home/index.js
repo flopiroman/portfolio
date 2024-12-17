@@ -1,33 +1,35 @@
-import NavBar from "../navBar"
-import SideBar from "../sideBar"
-import React, {useState,} from 'react';
+import SideBar from "../sideBar";
+import React, { useState } from "react";
 import HomeSection from "../sectionHome";
 import Section from "../section";
 import { ActualWork, PolytechStage } from "../../Data";
 import Projects from "../projects";
 import Technos from "../technos";
 import Footer from "../footer";
-// import profilePicture from '../../profilePicture.png';
-const Home = () =>{
-    const [isOpen, setIsOpen] = useState(false);
+import { Stack } from "@mui/material";
+import NavBar from "../NavigationBar/NavBar";
+import MyTechnicalStacks from "../MyTechnicalStacks";
+import SomeThrees from "../SomeThrees";
+import MyExperiences from "../MyExperiences";
 
-    const onCloseButtonClik = () =>{
-        setIsOpen(!isOpen);
-    }
-
-
-    return (
-        <>
-        <SideBar isOpen ={isOpen}  onCloseButtonClik={onCloseButtonClik}/>
-        <NavBar onCloseButtonClik={onCloseButtonClik} />
-        <HomeSection/>
-        <Section {...ActualWork} />
+const Home = () => {
+  return (
+    <Stack style={{ maxWidth: "100%" }}>
+      <Stack height="100vh">
+        <NavBar />
+        <HomeSection />
+      </Stack>
+      {/* <SomeThrees /> */}
+      <MyTechnicalStacks />
+      <MyExperiences />
+      {/* <Section {...ActualWork} /> */}
+      {/* <Stack>
         <Section {...PolytechStage} />
-        <Projects/>
-        <Technos/>
-        <Footer/>
-        </>
-    );
-}
+        <Projects />
+        <Technos />
+      </Stack> */}
+    </Stack>
+  );
+};
 
 export default Home;

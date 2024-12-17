@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Déclenche le workflow sur la branche principale
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Récupérer ton code source
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Étape 2 : Installer Node.js et Yarn
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      # Étape 3 : Installer les dépendances
+      - name: Install dependencies
+        run: yarn install
+
+      # Étape 4 : Construire le projet
+      - name: Build project
+        run: yarn build
+
+      # Étape 5 : Déployer avec `gh-pages`
+      - name: Deploy to GitHub Pages
+        run: yarn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

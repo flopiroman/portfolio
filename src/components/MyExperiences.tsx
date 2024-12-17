@@ -43,6 +43,7 @@ const ExperiencesCard = styled(CardContainerAbastract)({
   backgroundColor: PALETTE.GREEN, 
   height: "350px",
   marginTop: '10px',
+  marginBottom: '10px',
 })
 
 const SmallTechnoCard = styled(TechnoCard)({
@@ -59,7 +60,7 @@ const MyExperiences = () => {
   };
 
   return (
-    <Stack bgcolor={PALETTE.WHITE} height="100vh" id="experiences">
+    <Stack bgcolor={PALETTE.WHITE} height="100vh" id="experiences" mb={2}>
     <Stack height="10vh" alignItems="center" justifyContent="center">
       <HomeHeader style={{ color: PALETTE.BLACK_GREEN }}>Some experiences...</HomeHeader>
     </Stack>

@@ -42,7 +42,7 @@ const HomeSection = () => {
             justifyContent="space-between"
             alignItems="center"
             className="card glow"
-            sx={{ backgroundColor: PALETTE.GREEN, maxWidth: '70vw', minHeight: "50vh", boxShadow: "20px 10px 10px grey", borderRadius: '30px' }}
+            sx={{ backgroundColor: PALETTE.GREEN, minWidth: '350px', maxWidth: '70vw', minHeight: "50vh", boxShadow: "20px 10px 10px grey", borderRadius: '30px' }}
           >
             <Stack width="40%" alignItems="center" justifyContent="center">
               <StyledImage src={Image} alt="Profile Picture" />

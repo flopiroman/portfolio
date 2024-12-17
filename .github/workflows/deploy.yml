@@ -29,22 +29,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Étape 4 : Construire le projet React
+      # Étape 4 : Construire le projet
       - name: Build project
         run: yarn build
 
-      # Étape 5 : Uploader le dossier `build` comme un artifact
-      - name: Upload build folder as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: github-pages  # Nomme l'artifact "github-pages"
-          path: ./build  # Le dossier de build généré par React
-
-      # Étape 6 : Déployer l'artifact sur GitHub Pages
+      # Étape 5 : Déployer avec `gh-pages`
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages  # Spécifie le nom de l'artifact pour la déploiement
+        run: yarn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

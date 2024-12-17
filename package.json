@@ -1,6 +1,8 @@
 {
   "name": "florian-ainadou-portfolio",
   "version": "2.0.0",
+  "license": "MIT",
+  "homepage": "https://flopiroman.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -32,6 +34,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -52,6 +56,7 @@
     "@types/react": "^18.3.12",
     "css-loader": "^5.2.4",
     "eslint-plugin-react": "^7.37.2",
+    "gh-pages": "^6.2.0",
     "globals": "^15.11.0",
     "react-refresh": "^0.14.2",
     "style-loader": "^2.0.0",

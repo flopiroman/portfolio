@@ -2,63 +2,61 @@ name: Deploy React to GitHub Pages
 
 on:
   push:
-    branches: 
-      - master  # Le workflow se déclenche à chaque push sur la branche `master`
-  workflow_dispatch:  # Permet d'exécuter ce workflow manuellement via l'onglet Actions
+    branches:
+      - master
+  workflow_dispatch:
 
 permissions:
-  contents: write   # Permission pour pousser les fichiers
-  pages: write      # Permission pour déployer sur GitHub Pages
-  id-token: write   # Permission pour générer des tokens OIDC (si nécessaire)
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false  # Permet d'attendre la fin des déploiements en cours
+  cancel-in-progress: false
 
 jobs:
-  # Job de build
   build:
     runs-on: ubuntu-latest
     steps:
-      # Étape 1 : Récupérer le code source
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Étape 2 : Installer Node.js et Yarn
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Version de Node.js
-          cache: 'yarn'       # Cache des dépendances avec Yarn
+          node-version: '18'
+          cache: 'yarn'
 
-      # Étape 3 : Installer les dépendances
       - name: Install dependencies
         run: yarn install
 
-      # Étape 4 : Construire le projet React
       - name: Build project
-        run: yarn build  # Création du dossier `build/`
+        run: yarn build
 
-      # Étape 5 : Uploader le dossier de build comme un artifact
+      # Nettoyer le dossier de build pour s'assurer qu'il est propre et n'a pas de fichiers inutiles
+      - name: Clean up build folder
+        run: |
+          rm -rf ./build/*  # Supprimer tout contenu non nécessaire avant de le télécharger
+          du -sh ./build    # Vérifier la taille après nettoyage
+
       - name: Upload build folder as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
-          name: github-pages  # Nom de l'artifact pour le déploiement
-          path: ./build  # Le dossier `build/` créé après le `yarn build`
+          name: github-pages
+          path: ./build
 
-  # Job de déploiement
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # URL de la page déployée
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build  # Ce job dépend du job "build" pour s'exécuter
+    needs: build
     steps:
-      # Étape 1 : Déployer le build sur GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: github-pages  # Nom de l'artifact à déployer
+          artifact_name: github-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Le token pour l'authentification GitHub
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
